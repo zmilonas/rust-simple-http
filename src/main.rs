@@ -1,5 +1,5 @@
 fn main() {
-  println!("Hello world");
-  let guess: i16 = "42".parse();
-  println!("{}", guess);
+  let mut args: Vec<String> = std::env::args().collect();
+
+  println!("Hello {}", args[1]);
 }
