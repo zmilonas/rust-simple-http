@@ -89,7 +89,7 @@ fn run() -> Result<HttpRequest, Error> {
             http_request.proto = l[2].to_string();
           },
           HEADERS => {
-            let l: Vec<&str> = line.split(':').collect();
+            let l: Vec<&str> = line.split(": ").collect();
             http_request.headers.insert(l[0].to_string(), l[1].to_string());
           },
           BODY => {
